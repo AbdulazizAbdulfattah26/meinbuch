@@ -1,0 +1,10 @@
+#!/bin/bash
+# Diese Befehle laufen DIREKT vor dem Start der interaktiven Nutzersitzung.
+# Sie werden NICHT in das Docker-Image eingebrannt.
+
+echo "--- Starte Vorbereitungen für die Nutzersitzung ---"
+
+python -c "print('Hallo! Der interaktive Server startet jetzt für dich...')"
+
+# WICHTIG für Binder: Kontrollübergabe
+exec "$@"
