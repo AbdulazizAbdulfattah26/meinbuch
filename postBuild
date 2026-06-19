@@ -1,0 +1,14 @@
+#!/bin/bash
+# Diese Befehle laufen beim Build des Docker-Images auf dem Binder-Server.
+# Perfekt für Datensätze, die fest im Image "eingebacken" sein sollen.
+
+echo "--- Starte postBuild: Datensatz wird heruntergeladen ---"
+
+# Beispiel 1: Erstellt einen Ordner für Daten, falls nicht vorhanden
+mkdir -p data
+
+# Beispiel 2: Lädt eine Beispieldatei aus dem Internet direkt in den Ordner
+# (Ersetze die URL durch deinen echten Datensatz!)
+curl -L -o data/mein_datensatz.csv "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv"
+
+echo "--- postBuild beendet: Daten erfolgreich im Image verankert ---"
