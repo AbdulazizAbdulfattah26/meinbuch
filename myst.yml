@@ -22,4 +22,4 @@ site:
   options:
     launch_buttons:
       binder: true
-      notebook_interface: jupyterlab
+      notebook_interface: jupyterlab  # Verwendet das moderne JupyterLab
