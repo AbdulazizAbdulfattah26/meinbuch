@@ -3,24 +3,23 @@ version: 1
 # In deiner myst.yml oder TOC-Struktur
 project:
   title: Mein Buch
+  # Hier stehen deine Kapitel (toc)
   toc:
     - file: index.md
     - file: 01_basics.md
     - file: 02_advanced_formatting.md
     - file: 03_myst_features.md
     - file: 04_code_interactivity.md
-    - file: aa
   id: dcef843f-acac-4123-b8f9-f75764c713fc
-  # title:
-  # description:
-  # keywords: []
-  # authors: []
-  repository: https://github.com/AbdulazizAbdulfattah26/meinbuch
+
+  # JETZT RICHTIG EINGERÜCKT (2 Leerzeichen davor!):
+  github: AbdulazizAbdulfattah26/meinbuch
   branch: main
-  # To autogenerate a Table of Contents, run "myst init --write-toc"
+  jupyter: true
+
+# Der site-Block bleibt so, wie er ist
 site:
   options:
-    # Aktiviert die interaktiven Buttons oben rechts auf den Buchseiten
     launch_buttons:
       binder: true
       notebook_interface: jupyterlab
