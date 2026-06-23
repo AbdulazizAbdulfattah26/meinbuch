@@ -17,9 +17,11 @@ project:
   branch: main
   jupyter: true
 
-# Der site-Block bleibt so, wie er ist
+# HIER DIE ERWEITERUNG FÜR JUPYTERHUB:
 site:
   options:
     launch_buttons:
       binder: true
-      notebook_interface: jupyterlab  # Verwendet das moderne JupyterLab
+      # Ersetze die URL unten durch deinen echten JupyterHub (z.B. deiner Universität)
+      jupyterhub: https://datahub.berkeley.edu
+      notebook_interface: jupyterlab

@@ -6,8 +6,8 @@ USER root
 # System-Pakete updaten und Git installieren
 RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
 
-# 2. Alle Pakete installieren (Das integrierte pip ist modern genug für jupytext!)
-RUN pip3 install --no-cache-dir notebook jupyterlab jupyterhub mystmd altair pandas "jupytext>=1.15.0"
+# System-Pakete updaten und Git installieren
+RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
 
 # 3. Binder-User (UID 1000) absichern
 ARG NB_USER=jovyan
