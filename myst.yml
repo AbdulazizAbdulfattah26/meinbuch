@@ -10,6 +10,7 @@ project:
     - file: 02_advanced_formatting.md
     - file: 03_myst_features.md
     - file: 04_code_interactivity.md
+    - file: 05_simple_notebook
   id: dcef843f-acac-4123-b8f9-f75764c713fc
 
   # JETZT RICHTIG EINGERÜCKT (2 Leerzeichen davor!):
@@ -22,6 +23,7 @@ site:
   options:
     launch_buttons:
       binder: true
-      # Ersetze die URL unten durch deinen echten JupyterHub (z.B. deiner Universität)
       jupyterhub: https://datahub.berkeley.edu
+      # HIER DIE ERWEITERUNG FÜR GOOGLE COLAB:
+      colab: https://colab.research.google.com
       notebook_interface: jupyterlab
