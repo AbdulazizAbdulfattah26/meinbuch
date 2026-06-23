@@ -1,4 +1,4 @@
-# 1. Ein modernes Jupyter-Basisimage nutzen (bringt Python 3.11 und aktuelles pip mit!)
+# 1. Ein modernes Jupyter-Basisimage nutzen
 FROM jupyter/scipy-notebook:ubuntu-22.04
 
 USER root
@@ -6,8 +6,8 @@ USER root
 # System-Pakete updaten und Git installieren
 RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
 
-# System-Pakete updaten und Git installieren
-RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
+# 2. HIER WAR DER FEHLER: Alle Python-Pakete inklusive jupytext und nbgitpuller installieren
+RUN pip3 install --no-cache-dir notebook jupyterlab jupyterhub mystmd altair pandas "jupytext>=1.15.0" nbgitpuller
 
 # 3. Binder-User (UID 1000) absichern
 ARG NB_USER=jovyan
