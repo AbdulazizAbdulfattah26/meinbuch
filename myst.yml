@@ -1,29 +1,26 @@
 # See docs at: https://mystmd.org/guide/frontmatter
 version: 1
-# In deiner myst.yml oder TOC-Struktur
+
 project:
   title: Mein Buch
-  # Hier stehen deine Kapitel (toc)
-  toc:
-    - file: index.md
-    - file: 01_basics.md
-    - file: 02_advanced_formatting.md
-    - file: 03_myst_features.md
-    - file: 04_code_interactivity.md
-    - file: 05_simple_notebook.ipynb
+  authors:
+    - name: Abdulaziz Abdulfattah
   id: dcef843f-acac-4123-b8f9-f75764c713fc
 
-  # JETZT RICHTIG EINGERÜCKT (2 Leerzeichen davor!):
   github: AbdulazizAbdulfattah26/meinbuch
-  branch: main
   jupyter: true
 
-# HIER DIE ERWEITERUNG FÜR JUPYTERHUB:
 site:
+  # Erstellt zwei saubere Navigations-Buttons ganz oben rechts auf der Webseite
+  nav:
+    - title: "Notebook (.ipynb) herunterladen"
+      url: /05_simple_notebook.ipynb
+      static: true
+
   options:
     launch_buttons:
       binder: true
       jupyterhub: https://datahub.berkeley.edu
-      # HIER DIE ERWEITERUNG FÜR GOOGLE COLAB:
-      colab: true
+      colab: "https://colab.research.google.com/github/AbdulazizAbdulfattah26/meinbuch"
+      deepnote: true
       notebook_interface: jupyterlab
